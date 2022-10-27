@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="build/img/logo/mpetsa.png" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Primary Meta Tags -->
+    <title>MPETSA</title>
+    <meta name="title" content="MPETS" />
+    <meta name="description" content="MPETSA" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" href="dist/css/bootstrap.min.css"> -->
+    <!-- Leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/b8332e4c7c.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Style -->
+    <link rel="stylesheet" href="build/css/app.css" />
+  </head>
+  <body>
+    <header>
+      <!-- navbar -->
+      <nav class="navbar fixed-top-nav navbar-expand-sm navbar-light">
+        <!-- <nav class="navbar navbar-expand-lg navbar-light"> -->
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <img src="build/img/logo/mpetsa.webp" alt="logo" />
+          </a>
+
+          <div class="navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">
+                  <div class="spanish display-block">Nosotros</div>
+                  <div class="english display-none">About us</div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">
+                  <div class="spanish display-block">Servicios</div>
+                  <div class="english display-none">Services</div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">
+                  <div class="spanish display-block">Contacto</div>
+                  <div class="english display-none">Contact</div>
+                </a>
+              </li>
+            </ul>
+            <span class="navbar-text">
+              <div class="navbar-text-title">
+                <p class="spanish display-block">Seleccione el idioma</p>
+                <p class="english display-none">Choose the language</p>
+              </div>
+              <div class="btn-language">
+                <button class="btn-spanish">
+                  <img
+                    class="btn-spanish-img active"
+                    src="build/img/languages/spanish.webp"
+                    alt="spanish"
+                  />
+                </button>
+                <button class="btn-english">
+                  <img
+                    class="btn-english-img"
+                    src="build/img/languages/english.webp"
+                    alt="english"
+                  />
+                </button>
+              </div>
+            </span>
+          </div>
+        </div>
+      </nav>
+      <div class="spacing"></div>
+    </header>
+
+    <main class="vertical-center">
+      <section class="container form" id="contact">
+        <div class="contact-form">
+          <h2 class="title spanish display-block">Contacto</h2>
+          <h2 class="title english display-none">Contact</h2>
+          <form
+            action="https://formsubmit.co/contacto@mpetsa.com"
+            method="POST"
+            class="row g-3 needs-validation"
+            novalidate
+          >
+            <div class="col-md-12">
+              <label for="validationCustom01" class="form-label">
+                <div class="spanish display-block">Nombre</div>
+                <div class="english display-none">Name</div>
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                id="validationCustom01"
+                name="Nombre"
+                required
+              />
+              <div class="invalid-feedback">
+                <div class="spanish display-block">Ingrese un nombre</div>
+                <div class="english display-none">Please provide a name</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustom02" class="form-label">
+                <div class="spanish display-block">Teléfono</div>
+                <div class="english display-none">Phone</div>
+              </label>
+              <input
+                type="tel"
+                class="form-control"
+                id="validationCustom02"
+                pattern="[0-9]+"
+                required
+                name="Teléfono"
+              />
+              <div class="invalid-feedback">
+                <div class="spanish display-block">
+                  Ingrese un número de teléfono
+                </div>
+                <div class="english display-none">
+                  Please provide a phone number
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustomUsername" class="form-label">
+                <div class="spanish display-block">Correo electrónico</div>
+                <div class="english display-none">E-mail</div>
+              </label>
+              <div class="input-group has-validation">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="validationCustomUsername"
+                  aria-describedby="inputGroupPrepend"
+                  name="Correo"
+                  required
+                />
+                <div class="invalid-feedback">
+                  <div class="spanish display-block">
+                    Ingrese un correo válido
+                  </div>
+                  <div class="english display-none">
+                    Please provide a valid e-mail address
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <label for="validationCustom03" class="form-label">
+                <div class="spanish display-block">Mensaje</div>
+                <div class="english display-none">Message</div>
+              </label>
+              <textarea
+                class="form-control"
+                id="validationCustom03"
+                name="Mensaje"
+                required
+              ></textarea>
+              <div class="invalid-feedback">
+                <div class="spanish display-block">
+                  Por favor, ingrese un mensaje
+                </div>
+                <div class="english display-none">Please write a message</div>
+              </div>
+            </div>
+
+            <div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="invalidCheck"
+                  required
+                />
+                <label class="form-check-label" for="invalidCheck">
+                  <a href="#exampleModal" data-bs-toggle="modal">
+                    <p class="aviso spanish display-block">
+                      Acepto el aviso de privacidad
+                    </p>
+                    <p class="aviso english display-none">
+                      I agree with the privacy policy
+                    </p>
+                  </a>
+                </label>
+                <div class="invalid-feedback">
+                  <p class="aviso spanish display-block">
+                    Debe aceptar el aviso de privacidad
+                  </p>
+                  <p class="aviso english display-none">
+                    You must agree before submitting
+                  </p>
+                </div>
+              </div>
+            </div>
+            <input
+              type="hidden"
+              name="_next"
+              value="https://www.affacargo.com/thanks.html"
+            />
+            <input
+              type="hidden"
+              name="_subject"
+              value="Solicitud de informes"
+            />
+            <div class="d-grid d-md-block d-md-flex justify-content-md-center">
+              <button class="btn btn-send" type="submit">
+                <div class="spanish display-block">Enviar</div>
+                <div class="english display-none">Submit</div>
+              </button>
+            </div>
+
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3
+                      class="modal-title spanish display-block"
+                      id="exampleModalLabel"
+                    >
+                      Aviso de privacidad
+                    </h3>
+                    <h3
+                      class="modal-title english display-none"
+                      id="exampleModalLabel"
+                    >
+                      Privacy Policy
+                    </h3>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body spanish display-block">
+                    <p>
+                      Mexicana de proyectos en eficiencia termica S.A. de C.V.
+                      (en lo sucesivo, indistintamente, "MEPTSA" o “Nosotros”),
+                      en cumplimiento con lo dispuesto en la Ley Federal de
+                      Protección de Datos Personales en Posesión de los
+                      Particulares (en lo sucesivo, según dicha ley haya sido o
+                      pueda ser modificada y/o reformada, la “Ley de Datos”) y
+                      su reglamento, hace de su conocimiento el presente aviso
+                      de privacidad (en lo sucesivo, según dicho aviso haya sido
+                      o pueda ser modificado, actualizado y/o reformado, el
+                      “Aviso”).
+                    </p>
+                    <br />
+                    <p>
+                      I. Responsable de los Datos Personales y Datos de Contacto
+                    </p>
+                    <p>
+                      MEPTSA, con domicilio en Calle oro s/n Col. Lomas Verdes ,
+                      Solidaridad 1 , Municipio de tultitlan , Estado de Mexico
+                      , Mexico ,C.P. 54948, es responsable del tratamiento de
+                      los datos personales. Puede contactarnos a través de los
+                      siguientes medios: (i) al correo electrónico:
+                      contacto@mpetsa.com, y (ii) directamente en el domicilio:
+                      Calle oro s/n Col. Lomas Verdes , Solidaridad 1 ,
+                      Municipio de tultitlan , Estado de Mexico , Mexico ,C.P.
+                      54948.
+                    </p>
+                    <br />
+                    <p>II. Datos Personales Recabados.</p>
+                    <p>
+                      Ya sea, a través del sitio web www.mpetsa.com (el “Sitio
+                      Web”), vía correo electrónico, vía telefónica y/o
+                      personalmente, Usted podrá proporcionar a MEPTSA los
+                      siguientes datos personales (en adelante, conjuntamente,
+                      los “Datos Personales Recabados”): nombre completo, número
+                      de teléfono celular, correo electrónico, domicilio y
+                      Registro Federal de Contribuyentes. Los Datos Personales
+                      Recabados serán almacenados con las medidas de seguridad
+                      administrativas, técnicas y físicas necesarias que
+                      permiten garantizar su privacidad y confidencialidad. Los
+                      Datos Personales Recabados estarán protegidos contra daño,
+                      pérdida, alteración, destrucción o el uso, acceso o
+                      tratamiento no autorizado de los mismos. Se informa que no
+                      se recabarán datos personales sensibles.
+                    </p>
+                    <br />
+                    <p>III. Finalidad de los Datos Personales Recabados.</p>
+                    <p>
+                      Los Datos Personales Recabados serán utilizados por parte
+                      de Nosotros:
+                    </p>
+                    <ol>
+                      <li>
+                        Como medio de comunicación que Usted quiera realizar a
+                        través del Sitio Web.
+                      </li>
+                      <li>
+                        Para generar una lista de correo electrónico para
+                        distribuir nuestros boletines electrónicos, anuncios,
+                        noticias, materiales promocionales y otras
+                        comunicaciones con fines a nuestros servicios.
+                      </li>
+                      <li>
+                        Para la utilización de cookies y beacons. Las cookies
+                        son pequeños archivos que, a través de la utilización
+                        del Sitio Web, transfieren al disco duro de su ordenador
+                        mediante el navegador Web (si es que está habilitada
+                        esta función en su navegador web) y que permiten
+                        reconocer su navegador y recordar cierta información.
+                        Esta información está pensada para mejorar su
+                        experiencia en el Sitio Web. También utilizamos una
+                        tecnología nombrada web beacons, que consiste en
+                        imágenes insertadas en una página o correo electrónico
+                        que se utilizan para monitorear el comportamiento de un
+                        visitante, como almacenar información sobre la dirección
+                        IP del usuario, duración del tiempo de interacción en la
+                        página, el tipo de navegador utilizado, sistema
+                        operativo, momento en que se accedió a la página, y en
+                        el caso del correo electrónico, la asociación de los
+                        datos anteriores con el destinatario.
+                      </li>
+                    </ol>
+                    <br />
+                    <p>
+                      IV. Revocación del consentimiento, limitación de uso o
+                      divulgación de los Datos Personales Recabados y ejercicio
+                      de los derechos de acceso, rectificación, cancelación u
+                      oposición (ARCO)
+                    </p>
+                    <p>
+                      Usted, o su representante legal, podrá en cualquier
+                      momento: revocar su consentimiento para el tratamiento o
+                      uso de sus datos personales por parte de MEPTSA, limitar
+                      su uso o divulgación, así como acceder los Datos
+                      Personales Recabados, rectificarlos en caso de que sean
+                      inexactos o incompletos, cancelarlos y oponerse a su
+                      tratamiento en su totalidad o para ciertos fines. Para
+                      tales efectos, Usted deberá contactar a nuestro oficial de
+                      protección de datos personales, a través del correo
+                      electrónico: contacto@mpetsa.com
+                    </p>
+                    <br />
+                    <p>
+                      V. Procedimiento para comunicar los cambios al Aviso de
+                      Privacidad.
+                    </p>
+                    <p>
+                      Todo cambio efectuado al presente Aviso lo haremos de su
+                      conocimiento a través del Sitio Web.
+                    </p>
+                    <br />
+                    <p>
+                      AL TENER ACCESO A ESTE AVISO DE PRIVACIDAD, SE ENTIENDE
+                      QUE USTED HA REVISADO, LEÍDO Y ACEPTADO LOS TÉRMINOS DEL
+                      MISMO, POR LO QUE OTORGA SU CONSENTIMIENTO PARA EL
+                      TRATAMIENTO DE SUS DATOS PERSONALES, POR PARTE DE MEPTSA,
+                      CONFORME LO AQUÍ ESTABLECIDO
+                    </p>
+                    <br />
+                    <p>
+                      <i
+                        >Última actualización de este aviso de privacidad:
+                        12/10/2022</i
+                      >
+                    </p>
+                  </div>
+                  <div class="modal-body english display-none">
+                    <p>
+                      Mexicana de proyectos en eficiencia termica S.A. de C.V
+                      (in the following, also referred as "MEPTSA" or "Us")
+                    </p>
+                    <br />
+                    <p>
+                      I. Contact information and responsable of the personal
+                      data
+                    </p>
+                    <p>
+                      MEPTSA, with address at Calle oro s/n Col. Lomas Verdes ,
+                      Solidaridad 1 , Municipio de tultitlan , Estado de Mexico
+                      , Mexico ,C.P. 54948, is responsable for the treatment of
+                      personal data. You can contact us through the following
+                      media: (i) e-mail: contacto@mpetsa.com, and (ii) directly
+                      at the address: Calle oro s/n Col. Lomas Verdes ,
+                      Solidaridad 1 , Municipio de tultitlan , Estado de Mexico
+                      , Mexico ,C.P. 54948
+                    </p>
+                    <br />
+                    <p>II. Personal data</p>
+                    <p>
+                      Either via www.mpetsa.com (the "website"), or via e-mail,
+                      phone, or personally, you can provide to MPETSA the
+                      following personal data (from here on, also reffered to as
+                      "Collected personal data"): name, phone number, e-mail,
+                      address, and RFC (for Mexican clients). The collected
+                      personal data will be stored with the required
+                      administrative, technique and physical security measures
+                      that allow us to guarantee your privacy and
+                      confidentiality. The collected personal data will be
+                      protected against damage, loss, alteration, destruction,
+                      or use, access and unauthorized treatment. Sensitive data
+                      is reported not to be gathered.
+                    </p>
+                    <br />
+                    <p>III. Purpose of the collected personal data</p>
+                    <p>The collected personal data will be used by us:</p>
+                    <ol>
+                      <li>
+                        As the communication way that you want to realize
+                        through the website
+                      </li>
+                      <li>
+                        To generate an e-mail list to distribute our electronic
+                        newletters, ads, news, promos, and other material to
+                        promote our services
+                      </li>
+                      <li>
+                        For the utilization of cookies and beacons. The cookies
+                        are files that, during the utilization of the website,
+                        transfer information to the hard disk of your computer
+                        through the website (if the function is not disabled)
+                        and that allow to recognize your browser and remember
+                        certain information. This information is intended to
+                        improve your experience during your visit to the
+                        website. We also use beacons, which are images that are
+                        inserted within the site or e-mail that are used to
+                        monitor the behavior of a visitor, such as saving
+                        information about the IP address, duration of the time
+                        that the user interacts with the website, the type of
+                        browser that is used, operating system, timestamps, and
+                        in the case of e-mails, the association of the
+                        aforementioned data to the user
+                      </li>
+                    </ol>
+                    <br />
+                    <p>
+                      IV. Revocation of the consent, limitation for the use or
+                      divulgation of the collected personal data and exercise of
+                      the access, rectify, cancel or oppose of your personal
+                      data (ARCO rights)
+                    </p>
+                    <p>
+                      You, or your legal representative, can, at any moment,
+                      revocate your consent for the treatment or use of your
+                      personal data by MPETSA, limitate its use or divulgation,
+                      as well as the access of the collected personal data,
+                      rectify them in case of them being incorrect or
+                      incomplete, cancel them or oppose to their treatment in
+                      its totality or just for certain purposes. For such
+                      effects, you must contact our official of personal data
+                      protection, via the e-mail contacto@mpetsa.com
+                    </p>
+                    <br />
+                    <p>
+                      V. Procedure to notify the changes to the Privacy Policy.
+                    </p>
+                    <p>
+                      All changes to the Privacy Policy will be specified in the
+                      website.
+                    </p>
+                    <br />
+                    <p>
+                      BY AGREEING TO THIS PRIVACY POLICY, IT IS UNDERSTOOD THAT
+                      YOU HAVE CHECKED, READ, AND ACCEPTED ITS TERMS AND
+                      CONDITIONS, BY WHICH YOU GIVE YOUR CONSENT FOR THE
+                      TREATMENT OF YOUR PERSONAL DATA BY MPETSA, ACCORDING TO
+                      THE PRIVACY POLICY.
+                    </p>
+                    <br />
+                    <p><i>Last update of the Privacy Policy: 12/10/2022</i></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn"
+                      data-bs-dismiss="modal"
+                    >
+                      <div class="spanish display-block">Cerrar</div>
+                      <div class="english display-none">Close</div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="contact-info">
+          <div class="contact-point">
+            <i class="bi bi-envelope"></i>
+            <a href="mailto: contact@mpetsa.com"><p>contacto@mpetsa.com</p></a>
+          </div>
+          <div class="contact-point">
+            <i class="bi bi-telephone"></i>
+            <a href="https://wa.me/5215563436038?"><p>+52 1 55 6343 6038</p></a>
+          </div>
+          <div class="contact-point">
+            <i class="bi bi-geo-alt"></i>
+            <a href="https://goo.gl/maps/dt1VQeAhNahfWMYVA"><p>Calle oro s/n Col. Lomas Verdes, Solidaridad 1, Municipio de Tultitlán, Estado de México, México, C.P. 54948</p></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p class="spanish display-block">
+        MPETSA <span class="display-large">-</span>
+        <span class="name-extra"> 2022 </span>
+      </p>
+      <p class="english display-none">
+        MPETSA <span class="display-large">-</span>
+        <span class="name-extra"> 2022 </span>
+      </p>
+    </footer>
+
+    <!-- Boostrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Lazyframe upload -->
+    <script src="dist/lazyframe.min.js"></script>
+    <!-- Custom JS -->
+    <script src="build/js/bundle.min.js"></script>
+    <!-- Leaflet's JS -->
+    <script
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""
+    ></script>
+  </body>
+</html>
