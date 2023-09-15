@@ -1,207 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="icon" href="build/img/logo/mpetsa.png" />
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Primary Meta Tags -->
-    <title>MPETSA</title>
-    <meta name="title" content="MPETS" />
-    <meta name="description" content="MPETSA" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Fontawesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-    />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <!-- <link rel="stylesheet" href="dist/css/bootstrap.min.css"> -->
-    <!-- Leaflet -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
-      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
-      crossorigin=""
-    />
-    <!-- Font awesome -->
-    <script
-      src="https://kit.fontawesome.com/b8332e4c7c.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Style -->
-    <link rel="stylesheet" href="build/css/app.css" />
-  </head>
-  <body>
-    <header>
-      <!-- navbar -->
-      <nav class="navbar fixed-top-nav navbar-expand-sm navbar-light">
-        <!-- <nav class="navbar navbar-expand-lg navbar-light"> -->
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/">
-            <img src="build/img/logo/mpetsa.webp" alt="logo" />
-          </a>
 
-          <div class="navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">
-                  <div class="spanish display-block">Nosotros</div>
-                  <div class="english display-none">About us</div>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="services.html">
-                  <div class="spanish display-block">Servicios</div>
-                  <div class="english display-none">Services</div>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">
-                  <div class="spanish display-block">Contacto</div>
-                  <div class="english display-none">Contact</div>
-                </a>
-              </li>
-            </ul>
-            <span class="navbar-text">
-              <div class="navbar-text-title">
-                <p class="spanish display-block">Seleccione el idioma</p>
-                <p class="english display-none">Choose the language</p>
-              </div>
-              <div class="btn-language">
-                <button class="btn-spanish">
-                  <img
-                    class="btn-spanish-img active"
-                    src="build/img/languages/spanish.webp"
-                    alt="spanish"
-                  />
-                </button>
-                <button class="btn-english">
-                  <img
-                    class="btn-english-img"
-                    src="build/img/languages/english.webp"
-                    alt="english"
-                  />
-                </button>
-              </div>
-            </span>
-          </div>
+<head>
+  <link rel="icon" href="build/img/logo/mpetsa.png" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Primary Meta Tags -->
+  <title>MPETSA</title>
+  <meta name="title" content="MPETS" />
+  <meta name="description" content="MPETSA" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <!-- <link rel="stylesheet" href="dist/css/bootstrap.min.css"> -->
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin="" />
+  <!-- Font awesome -->
+  <script src="https://kit.fontawesome.com/b8332e4c7c.js" crossorigin="anonymous"></script>
+  <!-- Style -->
+  <link rel="stylesheet" href="build/css/app.css" />
+</head>
+
+<body>
+  <header>
+    <!-- navbar -->
+    <nav class="navbar fixed-top-nav navbar-expand-sm">
+      <!-- <nav class="navbar navbar-expand-lg navbar-light"> -->
+      <div class="container-fluid navbar-elements">
+        <a class="navbar-brand" href="/">
+          <img src="build/img/logo/mpetsa.webp" alt="logo" />
+        </a>
+
+        <div class="navbar-collapse" id="navbarSupportedContent">
+          <span class="navbar-text">
+            <div class="navbar-text-title">
+              <p class="spanish display-block">Seleccione el idioma</p>
+              <p class="english display-none">Choose the language</p>
+            </div>
+            <div class="btn-language">
+              <button class="btn-spanish">
+                <img class="btn-spanish-img active" src="build/img/languages/spanish.webp" alt="spanish" />
+              </button>
+              <button class="btn-english">
+                <img class="btn-english-img" src="build/img/languages/english.webp" alt="english" />
+              </button>
+            </div>
+          </span>
         </div>
-      </nav>
-      <div class="spacing"></div>
-    </header>
-
-    <main class="main-section">
-      <div class="middle-container">
-        <h2 class="title spanish display-block">Servicios</h2>
-        <h2 class="title english display-none">Services</h2>
-        <section class="section-container" id="services">
-          <div class="us-text-1">
-            <p class="us-text-1 text-center spanish display-block">
-              Nos  hemos  especializado  en sistemas de aislamientos eficientes para la industria, brindando materiales de vanguardia y mano de obra  capacitada para cumplir con las necesidades de nuestros  socios  comerciales a  costos  competitivos.
-            </p>
-            <p class="us-text-1 text-center english display-none">
-              We have specialized in efficient thermal insulation systems for industry, offering cutting edge materials and skilled labor to fulfill the neccessities of our commercial associates at competitive costs.
-            </p>
-          </div>
-          <div class="main-service">
-            <div class="element">
-              <div class="main-services">
-                <div class="materials">
-                  <p class="spanish display-block">Materiales para Sistemas de Altas Temperaturas</p>
-                  <p class="english display-none">Materials for High Temperature Systems</p>
-                </div>
-                <div class="materials">
-                  <p class="spanish display-block">Materiales para Sistemas de Bajas Temperaturas</p>
-                  <p class="english display-none">Materials for Low Temperature Systems</p>
-                </div>
-                <div class="materials">
-                  <p class="spanish display-block">Materiales para Sistemas de Aire Acondicionado</p>
-                  <p class="english display-none">Materials for Air Conditioner Systems</p>
-                </div>
-                <div class="materials">
-                  <p class="spanish display-block">Panel Térmico y Acústico</p>
-                  <p class="english display-none">Acoustic and Thermal Panel</p>
-                </div>
-                <div class="materials">
-                  <p class="spanish display-block">Materiales para Sistemas Acústicos</p>
-                  <p class="english display-none">Materials for Acoustic Systems</p>
-                </div>
-                <div class="materials">
-                  <p class="spanish display-block">Soportes y Silletas</p>
-                  <p class="english display-none">Supports and Saddles</p>
-                </div>
-                <div class="materials">
-                  <p class="spanish display-block">Terminados</p>
-                  <p class="english display-none">Finished Structures</p>
-                </div>
-                <div class="materials">
-                  <p class="spanish display-block">Accesorios para Reutilizables</p>
-                  <p class="english display-none">Accessories for Reusables</p>
-                </div>
-                <div class="materials">
-                  <p class="spanish display-block">Etiquetado</p>
-                  <p class="english display-none">Labelling</p>
-                </div>
-              </div>
-              <figure class="img-gradient">
-                <img src="build/img/services/AislamientoTermicoIndustiral.webp" alt="test" />
-              </figure>
-              <div class="title-service">
-                <p class="spanish display-block">Ingeniería, instalación y mantenimiento de aislamiento térmico industrial</p>
-                <p class="english display-none">Engineering, instalation and Manteinance in Industrial Thermal Insulation</p>
-              </div>
-            </div>
-            <div class="title-service-sm">
-              <p class="spanish display-block">Ingeniería, instalación y mantenimiento de aislamiento térmico industrial</p>
-                <p class="english display-none">Engineering, instalation and Manteinance in Industrial Thermal Insulation</p>
-            </div>
-          </div>
-          <div class="services">
-            <div class="element">
-              <figure class="img-gradient">
-                <img src="build/img/services/Tuberias.webp" alt="test" />
-              </figure>
-              <div class="title-service">
-                <p class="spanish display-block">Ingeniería e Instalación de Tubería a Presión</p>
-                <p class="english display-none">Engineering and Instalation of Pressure Pipes</p>
-              </div>
-            </div>
-            <div class="title-service-sm">
-              <p class="spanish display-block">Ingeniería e Instalación de Tubería a Presión</p>
-              <p class="english display-none">Engineering and Instalation of Pressure Pipes</p>
-            </div>
-            <div class="element">
-              <figure class="img-gradient">
-                <img src="build/img/services/PruebasNoDestructivas.webp" alt="test" />
-              </figure>
-              <div class="title-service">
-                <p class="spanish display-block">Servicios de Pruebas no Destructivas y Estudios de Integridad Mecánica</p>
-                <p class="english display-none">Services of non-destructive Tests and Mechanical Integrity Analysis</p>
-              </div>
-            </div>
-            <div class="title-service-sm">
-                <p class="spanish display-block">Servicios de Pruebas no Destructivas y Estudios de Integridad Mecánica</p>
-                <p class="english display-none">Services of non-destructive Tests and Mechanical Integrity Analysis</p>
-              </div>
-          </div>
-        </section>
       </div>
-    </main>
+    </nav>
+    <div class="spacing"></div>
+  </header>
 
-    <footer>
+  <main class="vertical-center">
+    <div class="left-navbar">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">
+              <div class="spanish display-block">Nosotros</div>
+              <div class="english display-none">About us</div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">
+              <div class="spanish display-block">Servicios</div>
+              <div class="english display-none">Services</div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">
+              <div class="spanish display-block">Contacto</div>
+              <div class="english display-none">Contact</div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <section class="container form">
+
+      </section>
+    </div>
+  </main>
+
+  <!-- <footer>
       <p class="spanish display-block">
         MPETSA <span class="display-large">-</span>
         <span class="name-extra"> 2022 </span>
@@ -210,23 +104,20 @@
         MPETSA <span class="display-large">-</span>
         <span class="name-extra"> 2022 </span>
       </p>
-    </footer>
+    </footer> -->
 
-    <!-- Boostrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Lazyframe upload -->
-    <script src="dist/lazyframe.min.js"></script>
-    <!-- Custom JS -->
-    <script src="build/js/bundle.min.js"></script>
-    <!-- Leaflet's JS -->
-    <script
-      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
-      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
-      crossorigin=""
-    ></script>
-  </body>
+  <!-- Boostrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <!-- Lazyframe upload -->
+  <script src="dist/lazyframe.min.js"></script>
+  <!-- Custom JS -->
+  <script src="build/js/bundle.min.js"></script>
+  <!-- Leaflet's JS -->
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+</body>
+
 </html>
