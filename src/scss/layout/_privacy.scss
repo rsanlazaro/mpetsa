@@ -1,0 +1,39 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.modal-dialog {
+  h3,
+  li,
+  p {
+    color: v.$oscuro;
+  }
+  .btn {
+    color: v.$oscuro;
+    font-weight: 500;
+    background-color: lighten(v.$azul, 50%);
+    &:hover {
+      background-color: lighten(v.$naranja,15%);
+      // color: v.$blanco;
+    }
+  }
+}
+
+.modal-header,
+.modal-body {
+  background-color: rgba($color: v.$blanco, $alpha: 0.9);
+  padding: 2rem;
+}
+
+.modal-content {
+  // background-color: transparent;
+  // padding: 2rem;
+  border: none;
+}
+
+.modal-footer {
+  padding: 0 inherit;
+  .btn {
+    width: 75%;
+    margin: 2rem auto;
+  }
+}

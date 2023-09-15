@@ -1,0 +1,142 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.services {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 5rem;
+  @include m.telefonoSM {
+    grid-template-columns: repeat(1, 1fr);
+    // gap: 3rem;
+    margin-top: 3rem;
+  }
+  @include m.telefono {
+    margin: 5rem auto 10rem auto;
+    gap: 4rem;
+    max-width: 80rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include m.tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.main-service {
+  margin-top: 5rem;
+  @include m.tablet {
+    max-width: 80rem;
+    margin: 5rem auto 10rem auto;
+  }
+}
+
+.element {
+  height: fit-content;
+}
+
+figure {
+  height: 100%;
+}
+
+.img-gradient {
+  position: relative;
+}
+
+.img-gradient::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 27, 77, 0.7),
+    rgba(255, 255, 255, 0.3) 40%,
+    transparent
+  );
+}
+
+.element {
+  position: relative;
+}
+
+.title-service-sm {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+  @include m.telefono {
+    display: none;
+  }
+}
+
+.title-service {
+  display: none;
+  @include m.telefono {
+    display: block;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding: inherit 2rem 1rem 2rem;
+  }
+}
+
+/* CARD EFFECT */
+
+@include m.telefono {
+  .main-service {
+    .img-gradient {
+      opacity: 1;
+      transition: opacity 1.5s;
+      transition-timing-function: ease-out;
+    }
+    .element {
+      position: relative;
+      &:hover {
+        .title-service {
+          display: none;
+        }
+        .img-gradient {
+          opacity: 0.25;
+          transition: all 1s;
+        }
+        .main-services {
+          padding: 4rem;
+          display: block;
+          position: absolute;
+          z-index: 102;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: auto;
+          width: 100%;
+          color: v.$blanco;
+          gap: 1.5rem;
+          color: lighten(v.$azul, 60%);
+          font-weight: 600;
+          font-size: 1.25rem;
+          .materials {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+          }
+          @include m.tablet {
+            padding: 8rem;
+            grid-template-columns: repeat(2, 1fr);
+            font-weight: 600;
+            font-size: 1.5rem;
+            gap: 4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-services {
+  display: none;
+}

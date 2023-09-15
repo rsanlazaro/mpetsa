@@ -1,0 +1,202 @@
+@use "base/mixins" as m;
+
+.mision-description,
+.vision-description {
+  margin-top: 1rem;
+  @include m.telefonoSM {
+    margin-top: 0;
+  }
+}
+
+.AFFA-info {
+  .display-large {
+    display: none;
+    @include m.telefonoSM {
+      display: inline;
+    }
+  }
+  .name-extra {
+    display: block;
+    @include m.telefonoSM {
+      display: inline;
+    }
+  }
+  .affa-text,
+  .affa-image {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+  .affa-text {
+    margin-bottom: 2rem;
+  }
+  // margin-top: 2rem;
+  text-align: center;
+  img {
+    height: 15rem;
+    object-fit: cover;
+  }
+  @include m.telefonoSM {
+    .affa-image {
+      img {
+        height: 26rem;
+      }
+    }
+  }
+  @include m.telefono {
+    .affa-image {
+      img {
+        height: 40rem;
+        object-fit: cover;
+      }
+    }
+  }
+  @include m.tablet {
+    // margin-top: 4rem;}
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    .affa-image {
+      img {
+        height: 30rem;
+        object-fit: cover;
+      }
+    }
+    h3 {
+      margin: 0;
+      margin-top: 1rem;
+    }
+    p {
+      text-align: justify;
+      margin-bottom: 1rem;
+    }
+    .affa-text {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+  @include m.desktop {
+    .affa-image {
+      img {
+        height: 35rem;
+      }
+    }
+  }
+}
+
+.text-short {
+  display: block;
+}
+
+.text-long {
+  display: none;
+}
+
+@include m.desktop {
+  .text-long {
+    display: block;
+  }
+  .text-short {
+    display: none;
+  }
+}
+
+ul {
+  padding-left: 0;
+  li {
+    list-style-type: none;
+    display: block;
+  }
+}
+
+.vision-section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section-us-grid {
+  display: flex;
+  flex-direction: column;
+  .us-img,
+  .us-img-2 {
+    order: -1;
+    margin: auto;
+    @include m.desktopXXL {
+      margin: 0;
+    }
+  }
+  @include m.telefonoSM {
+    .us-img,
+    .us-img-2 {
+      width: 80%;
+    }
+  }
+  @include m.telefono {
+    .us-img,
+    .us-img-2 {
+      width: 50%;
+    }
+  }
+  @include m.desktopXXL {
+    .us-img {
+      width: 90%;
+      order: 1;
+      margin-top: 3rem;
+      display: flex;
+      align-items: flex-start;
+      padding-left: 2rem;
+    }
+    .us-img-2 {
+      order: -1;
+      width: 80%;
+      margin-top: 3rem;
+      display: flex;
+      align-items: flex-start;
+      padding-left: 6rem;
+    }
+    .vision-description {
+      h3 {
+        padding-left: 0;
+        margin-left: 0;
+        text-align: end;
+        width: 90%;
+      }
+      .section-us {
+        margin-left: 0;
+        width: 90%;
+        p {
+          text-align: end;
+        }
+      }
+    }
+    .mision-description {
+      h3 {
+        padding-left: 0;
+        margin-left: 6rem;
+        text-align: start;
+        width: 75%;
+      }
+      .section-us {
+        margin-left: 6rem;
+        width: 75%;
+        p {
+          text-align: start;
+        }
+      }
+    }
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: 2rem;
+    width: 80%;
+    margin: 0 auto 2rem auto;
+    .section-us-grid {
+      h3 {
+        text-align: left;
+      }
+      .text-center {
+        text-align: left;
+      }
+    }
+  }
+}

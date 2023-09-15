@@ -1,0 +1,121 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.section-container-gallery {
+  margin: 0rem 1rem 0rem 1rem;
+  @include m.telefonoSM {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  @include m.telefono {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+  @include m.desktop {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 95rem;
+  }
+  @include m.desktopXL {
+    max-width: 115rem;
+  }
+}
+
+.galeria {
+  padding: 5rem 0;
+  h3 {
+    text-align: center;
+  }
+}
+
+.galeria-imagenes {
+  @include m.resetear-lista;
+  @include m.grid(2, 1rem);
+  @include m.telefonoSM {
+    @include m.grid(3, 1.5rem);
+  }
+  @include m.telefono {
+    @include m.grid(4, 2rem);
+  }
+  @include m.desktop {
+    @include m.grid(5, 2rem);
+  }
+  @include m.desktopXL {
+    @include m.grid(6, 2rem);
+  }
+  img {
+    width: 100%;
+    height: auto;
+    transition: all 0.1s;
+    &:hover {
+      -webkit-box-shadow: 0px 0px 7px 1px v.$gris;
+      -moz-box-shadow: 0px 0px 7px 1px v.$gris;
+      box-shadow: 0px 0px 7px 1px v.$gris;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100000;
+
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  place-items: center;
+
+  background-color: rgb(0 0 0 / 0.75);
+
+  img {
+    margin-bottom: 15vh;
+    display: block;
+    max-width: 70rem;
+    max-height: 60vh;
+    width: auto;
+    overflow: hidden;
+  }
+
+  @include m.tablet {
+    img {
+      height: 80vh;
+    }
+  }
+}
+
+.btn-cerrar {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: v.$blanco;
+  color: v.$secundarioOscuro;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  position: absolute;
+  margin-top: 75vh;
+  transition: all 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 7px 1px v.$gris;
+    -moz-box-shadow: 0px 0px 7px 1px v.$gris;
+    box-shadow: 0px 0px 7px 1px v.$gris;
+  }
+  @include m.telefonoSM {
+    width: 4.5rem;
+    height: 4.5rem;
+    font-size: large;
+  }
+  @include m.tablet {
+    width: 5.5rem;
+    height: 5.5rem;
+    font-size: 2.75rem;
+  }
+}

@@ -1,0 +1,223 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+#contact {
+  h2 {
+    color: v.$darkBackground;
+  }
+  label {
+    color: v.$darkBackground;
+  }
+  color: v.$darkBackground;
+  // background: rgba(255, 255, 255, 0.1);
+  background-color: v.$mediumBackground;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+//   backdrop-filter: blur(5.3px);
+  -webkit-backdrop-filter: blur(5.3px);
+  padding: 2rem;
+  @include m.telefono {
+    padding: 2rem 3rem 4rem 2rem;
+  }
+  margin: 2rem;
+  width: calc(100% - 10rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  margin-top: 1rem;
+  color: v.$darkBackground;
+  background-color: v.$lightBackground;
+  &:hover {
+    background-color: v.$naranja;
+    color: v.$darkBackground;
+  }
+  width: 100%;
+  @include m.tablet {
+    padding: 0.5rem 15rem;
+  }
+}
+
+.container {
+  form {
+    margin-bottom: 2rem;
+    @include m.telefono {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+    @include m.tablet {
+      margin-left: 6rem;
+      margin-right: 6rem;
+    }
+    // @include m.desktop {
+    //   margin-left: 20rem;
+    //   margin-right: 20rem;
+    // }
+  }
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  //   margin-top: 1rem;
+  h2 {
+    @include m.telefono {
+      //   margin-bottom: 0;
+    }
+  }
+  @include m.telefono {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+  @include m.tablet {
+    margin-bottom: 1rem;
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+textarea {
+  height: 10rem;
+}
+
+.btn-send {
+  background-color: v.$lightBackground;
+  color: v.$oscuro;
+  font-weight: 500;
+}
+
+.form-check-input {
+  // width: 1.5rem;
+  // height: 1.5rem;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+@include m.telefonoSM {
+  .form-check-input {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@include m.tablet {
+  .form-check-input {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 0.25rem;
+  }
+}
+
+@include m.desktop {
+  .form-check-input {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@include m.desktopXL {
+  .form-check-input {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 0.65rem;
+  }
+}
+
+// .form-check {
+//     display: flex;
+//     align-items: center;
+// }
+
+.aviso {
+  margin: 0;
+  margin-top: 2px;
+  color: v.$darkBackground;
+  @include m.desktop {
+    margin-top: 5px;
+  }
+  &:hover {
+    color: lighten(v.$naranja,15%);
+  }
+}
+
+form {
+  a {
+    color: v.$darkBackground;
+  }
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid,
+.was-validated .form-control:valid:focus,
+.form-control.is-valid:focus {
+  border-color: v.$naranja;
+}
+
+.form-control.is-valid:focus,
+.was-validated .form-control:valid:focus {
+  -webkit-box-shadow: 0px 0px 7px 1px v.$naranja;
+  -moz-box-shadow: 0px 0px 7px 1px v.$naranja;
+  box-shadow: 0px 0px 7px 1px v.$naranja;
+}
+
+.form-control.is-valid,
+.form-control.is-valid:focus,
+.was-validated .form-control:valid,
+.was-validated .form-control:valid:focus {
+  border-color: v.$naranja;
+}
+
+.form-check-input.is-valid:checked,
+.was-validated .form-check-input:valid:checked,
+.form-check-input:checked {
+  background-color: v.$naranja;
+}
+
+.form-check-input.is-valid,
+.was-validated .form-check-input:valid,
+.form-check-input:checked {
+  border-color: v.$naranja;
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='rgb(55,117,151)' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+}
+
+.modal-dialog {
+  max-width: 90%;
+  margin: 1.75rem auto;
+}
+
+.contact-info {
+  p {
+    color: v.$darkBackground;
+    margin: 0;
+  }
+  i {
+    margin-right: 2rem;
+    font-size: 2rem;
+  }
+  @include m.telefono {
+    margin-top: 8rem;
+  }
+}
+
+.contact-point {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  p {
+    color: v.$darkBackground;
+    &:hover {
+      color: lighten(v.$naranja,15%);
+    }
+  }
+}

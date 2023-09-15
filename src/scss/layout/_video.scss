@@ -1,0 +1,23 @@
+@use 'base/mixins' as m;
+
+.video {
+    display: flex;
+    justify-content: center;
+}
+
+iframe {
+    width: 21rem;
+    height: 15rem;
+    @include m.telefonoSM {
+        width: 28rem;
+        height: 20rem;
+    }
+    @include m.telefono {
+        width: 42rem;
+        height: 30rem;
+    }
+    @include m.tablet {
+        width: 49rem;
+        height: 35rem;
+    }
+}

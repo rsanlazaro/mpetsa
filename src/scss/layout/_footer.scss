@@ -1,0 +1,25 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+footer {
+  background-color: rgba($color: v.$naranja, $alpha: 1);
+  color: v.$blanco;
+  font-weight: 700;
+  // margin-top: 4rem;
+
+  p {
+    margin: 1rem;
+  }
+  .display-large {
+    display: none;
+    @include m.telefonoSM {
+      display: inline;
+    }
+  }
+  .name-extra {
+    display: block;
+    @include m.telefonoSM {
+      display: inline;
+    }
+  }
+}

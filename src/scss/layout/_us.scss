@@ -1,0 +1,129 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+svg {
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  @include m.desktop {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+.map {
+  margin-left: auto;
+  margin-right: auto;
+  height: 30rem;
+  max-width: 120rem;
+  @include m.tablet {
+    height: 40rem;
+    width: 80rem;
+  }
+  @include m.desktop {
+    height: 50rem;
+    width: 90rem;
+  }
+  @include m.desktopXL {
+    width: 100rem;
+  }
+}
+
+.us {
+  // p {
+  //     margin: 1.5rem;
+  // }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.title {
+  font-size: 3rem;
+  @include m.tablet {
+    font-size: 5rem;
+  }
+}
+
+.us-text-1 {
+  text-align: center;
+  @include m.telefono {
+    margin: inherit 3rem;
+  }
+  @include m.tablet {
+    margin: inherit 1rem;
+  }
+  // @include m.desktopXL {
+  //   margin-bottom: 5rem;
+  // }
+}
+
+.section-us-info {
+  margin: 3rem 0;
+  @include m.desktop {
+    margin: 10rem inherit;
+  }
+}
+
+.section-us-grid {
+  div {
+    @include m.desktopXXL {
+      h3,
+      p {
+        text-align: left;
+      }
+      h3 {
+        padding-left: 3.5rem;
+      }
+    }
+  }
+}
+
+.us-valores {
+  @include m.desktop {
+    margin: 15rem 0 8rem 0;
+  }
+}
+
+.section-container {
+  p,
+  li {
+    color: lighten(v.$azul, 65%);
+  }
+}
+
+.section-us {
+  display: block;
+  margin: 1rem auto;
+  @include m.telefono {
+    // display: flex;
+    // justify-content: space-between;
+    width: 70%;
+  }
+}
+
+.us-image {
+  width: 10rem;
+  display: none;
+  // @include m.telefono {
+  //   display: block;
+  // }
+}
+
+.us-text {
+  text-align: center;
+  // @include m.telefono {
+  //   width: 80%;
+  //   text-align: left;
+  // }
+}
+
+.image-left {
+  order: -1;
+}
+
+// .text-right {
+//   @include m.telefono {
+//     text-align: right;
+//   }
+// }

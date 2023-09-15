@@ -1,0 +1,142 @@
+@use 'base/variables' as v;
+
+// .social-media {
+//     h2 {
+//         margin-top: 0;
+//     }
+// }
+
+// .icons {
+//   display: flex;
+//   column-gap: 25px;
+//   justify-content: center;
+//   margin-bottom: 3rem;
+// }
+
+// .icon {
+//   width: 60px;
+//   height: 60px;
+//   display: inline-flex;
+//   align-items: center;
+//   justify-content: center;
+//   text-decoration: none;
+//   font-size: 26px;
+//   border-radius: 50%;
+//   transition-property: outline-offset, outline-color, background-color;
+//   transition-duration: 0.25s;
+//   &:hover {
+//     outline-offset: 4px;
+//     i {
+//         animation: shake .25s;
+//     }
+//   }
+// }
+
+// .icon--instagram {
+//     color: #A02D76;
+//     outline: 2px solid #A02D76;
+// }
+
+// .icon--facebook {
+//     color: v.$facebook;
+//     outline: 2px solid v.$facebook;
+// }
+
+// .icon--instagram:hover {
+//     background-image: radial-gradient(circle at 30% 107%,
+//     #fdf497 0%, #fdf497 5%,
+//     #fd5949 45%, #d6249f 60%,
+//     #285AEB 90%);
+//     outline-color: #A02D76;
+//     color: v.$blanco;
+// }
+
+// .icon--facebook:hover {
+//     color: v.$blanco;
+//     background-color: v.$facebook;
+//     outline-color: v.$facebook;
+// }
+
+// @keyframes shake {
+//     10%{transform: rotate(15deg);}
+//     20%{transform: rotate(-15deg);}
+//     30%{transform: rotate(15deg);}
+//     40%{transform: rotate(-15deg);}
+// }
+
+// @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+$timing        : 265ms;
+$iconColor     : #00B5F5;
+$accent        : #002A8F;
+$bluefade      : #0043E0;
+$gradient      : #00B5F5;
+
+@mixin transformScale($size: 1) {
+    transform: scale($size);
+    -ms-transform: scale($size);
+    -webkit-transform: scale($size);
+}
+
+.social-container {
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+.social-icons {
+    padding: 0;
+    list-style: none;
+    margin: 1em;
+  
+    li {
+        display: inline-block;
+        margin: 0.15em;
+        position: relative;
+        font-size: 1.2em;
+
+    }
+
+    i {
+        font-size: 2rem;
+        color: #fff;
+        position: absolute;
+        top: 1.5rem;
+        left: 2rem;
+        transition: all $timing ease-out;
+    }
+
+    a {
+        display: inline-block;
+      
+        &:before {
+            @include transformScale();
+            content: " ";
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+            display: block;
+            background: linear-gradient(45deg, $iconColor, $accent);
+            transition: all $timing ease-out;
+        }
+        
+        &:hover:before {
+            transform: scale(0);
+            transition: all $timing ease-in;
+        }
+        
+        &:hover i {
+            @include transformScale(2.2);
+            color: $iconColor;
+            background: -webkit-linear-gradient(45deg, $iconColor, $accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all $timing ease-in;
+        }
+    }
+  
+}       
+
+.bi::before, [class^="bi-"]::before, [class*=" bi-"]::before {
+    color: v.$beige;
+}
