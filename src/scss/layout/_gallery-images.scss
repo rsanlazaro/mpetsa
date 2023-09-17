@@ -28,7 +28,7 @@
   }
 }
 
-.galeria-imagenes {
+.galeria-imagenes {  
   @include m.resetear-lista;
   @include m.grid(2, 1rem);
   @include m.telefonoSM {
@@ -42,7 +42,7 @@
   }
   @include m.desktopXL {
     @include m.grid(6, 2rem);
-  }
+  }  
   img {
     width: 100%;
     height: auto;
@@ -53,6 +53,11 @@
       box-shadow: 0px 0px 7px 1px v.$gris;
     }
   }
+}
+
+.grid-right{
+  grid-auto-flow: dense;
+  direction: rtl;
 }
 
 .overlay {

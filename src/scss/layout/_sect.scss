@@ -1,0 +1,33 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.section-left-container{
+    margin: 0;
+    background-color: v.$mediumBackground;
+    padding: 1.5rem;
+    
+}
+
+.section-right{
+    text-align: right;  
+    ul{
+        justify-self: end;
+    }    
+}
+
+.section-left, .section-right{
+    padding: 5rem auto !important;
+    width: 95%;
+    margin: 2rem auto;
+
+    h4{
+        font-size: 2rem;  
+        margin: 1.5rem; 
+        margin-bottom: 0.5rem;     
+        font-weight: bold;
+    }
+    p{
+        font-size: 1.5rem;
+        margin: 1.5rem;
+    }
+}
