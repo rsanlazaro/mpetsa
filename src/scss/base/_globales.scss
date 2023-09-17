@@ -18,7 +18,7 @@ element.style {
 }
 
 body {
-  background-color: rgba($color: v.$azul, $alpha: 1);
+  background-color: v.$lightBackground;
   line-height: 1.5;
   height: 100vh;
   margin: 0;
@@ -209,5 +209,12 @@ footer {
   }
   @include m.desktopXL {
     margin: inherit 30rem;
+  }
+}
+
+.transparent {
+  opacity: 1;
+  @include m.tablet {
+    opacity: 0;
   }
 }

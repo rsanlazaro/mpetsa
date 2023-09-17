@@ -8,6 +8,9 @@
   label {
     color: v.$darkBackground;
   }
+  a {
+    color: v.$darkBackground;
+  }
   color: v.$darkBackground;
   // background: rgba(255, 255, 255, 0.1);
   background-color: v.$mediumBackground;
@@ -16,22 +19,38 @@
 //   backdrop-filter: blur(5.3px);
   -webkit-backdrop-filter: blur(5.3px);
   padding: 2rem;
-  @include m.telefono {
-    padding: 2rem 3rem 4rem 2rem;
-  }
   margin: 2rem;
-  width: calc(100% - 10rem);
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  @include m.telefono {
+    padding: 2rem 3rem 4rem 2rem;
+    width: 80%;
+  }
+  @include m.tablet {
+    width: calc(100% - 10rem);
+  }
+  @include m.desktop {
+    flex-direction: row;
+    max-width: 85rem;
+  }
+  @include m.desktopXL {
+    flex-direction: row;
+    max-width: 80%;
+  }
 }
 
 .btn {
   margin-top: 1rem;
-  color: v.$darkBackground;
-  background-color: v.$lightBackground;
+  color: v.$lightBackground;
+  background-color: v.$darkBackground;
+  transition: 0.5s all;
   &:hover {
-    background-color: v.$naranja;
+    background-color: v.$lightBackground;
     color: v.$darkBackground;
+    transition: 0.5s all;
   }
   width: 100%;
   @include m.tablet {
@@ -46,7 +65,11 @@
       margin-left: 2rem;
       margin-right: 2rem;
     }
-    @include m.tablet {
+    @include m.desktop {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+    }
+    @include m.desktopXL {
       margin-left: 6rem;
       margin-right: 6rem;
     }
@@ -86,9 +109,10 @@ textarea {
 }
 
 .btn-send {
-  background-color: v.$lightBackground;
-  color: v.$oscuro;
   font-weight: 500;
+  &:hover {
+    font-weight: 500;
+  }
 }
 
 .form-check-input {
@@ -142,8 +166,10 @@ textarea {
   @include m.desktop {
     margin-top: 5px;
   }
+  transition: 0.5s all;
   &:hover {
-    color: lighten(v.$naranja,15%);
+    color: v.$lightBackground;
+    transition: 0.5s all;
   }
 }
 
@@ -157,33 +183,33 @@ form {
 .was-validated .form-control:valid,
 .was-validated .form-control:valid:focus,
 .form-control.is-valid:focus {
-  border-color: v.$naranja;
+  border-color: v.$darkBackground;
 }
 
 .form-control.is-valid:focus,
 .was-validated .form-control:valid:focus {
-  -webkit-box-shadow: 0px 0px 7px 1px v.$naranja;
-  -moz-box-shadow: 0px 0px 7px 1px v.$naranja;
-  box-shadow: 0px 0px 7px 1px v.$naranja;
+  -webkit-box-shadow: 0px 0px 7px 1px v.$darkBackground;
+  -moz-box-shadow: 0px 0px 7px 1px v.$darkBackground;
+  box-shadow: 0px 0px 7px 1px v.$darkBackground;
 }
 
 .form-control.is-valid,
 .form-control.is-valid:focus,
 .was-validated .form-control:valid,
 .was-validated .form-control:valid:focus {
-  border-color: v.$naranja;
+  border-color: v.$darkBackground;
 }
 
 .form-check-input.is-valid:checked,
 .was-validated .form-check-input:valid:checked,
 .form-check-input:checked {
-  background-color: v.$naranja;
+  background-color: v.$darkBackground;
 }
 
 .form-check-input.is-valid,
 .was-validated .form-check-input:valid,
 .form-check-input:checked {
-  border-color: v.$naranja;
+  border-color: v.$darkBackground;
 }
 
 .form-control.is-valid,
@@ -205,8 +231,14 @@ form {
     margin-right: 2rem;
     font-size: 2rem;
   }
-  @include m.telefono {
+  @include m.desktop {
     margin-top: 8rem;
+  }
+  @include m.desktop {
+    margin-right: 3rem;
+  }
+  @include m.desktopXL {
+    margin-right: 3rem;
   }
 }
 
@@ -216,8 +248,10 @@ form {
   margin: 1.5rem 0;
   p {
     color: v.$darkBackground;
+    transition: 0.5s all;
     &:hover {
-      color: lighten(v.$naranja,15%);
+      color: v.$lightBackground;
+      transition: 0.5s all;
     }
   }
 }

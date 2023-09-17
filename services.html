@@ -34,14 +34,55 @@
 <body>
   <header>
     <!-- navbar -->
-    <nav class="navbar fixed-top-nav navbar-expand-sm">
+    <nav class="navbar fixed-top-nav navbar-expand-md">
       <!-- <nav class="navbar navbar-expand-lg navbar-light"> -->
       <div class="container-fluid navbar-elements">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand transparent">
           <img src="build/img/logo/mpetsa.webp" alt="logo" />
         </a>
 
-        <div class="navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-hidden-sm" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">
+                <div class="spanish display-block">Nosotros</div>
+                <div class="english display-none">About us</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">
+                <div class="spanish display-block">Servicios</div>
+                <div class="english display-none">Services</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">
+                <div class="spanish display-block">Contacto</div>
+                <div class="english display-none">Contact</div>
+              </a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            <div class="navbar-text-title">
+              <p class="spanish display-block">Seleccione el idioma</p>
+              <p class="english display-none">Choose the language</p>
+            </div>
+            <div class="btn-language">
+              <button class="btn-spanish">
+                <img class="btn-spanish-img active" src="build/img/languages/spanish.webp" alt="spanish" />
+              </button>
+              <button class="btn-english">
+                <img class="btn-english-img" src="build/img/languages/english.webp" alt="english" />
+              </button>
+            </div>
+          </span>
+        </div>
+
+        <div class="navbar-display-sm navbar-title">
+          MEXICANA DE PROYECTOS EN EFICIENCIA TÉRMICA S.A. DE C.V.
+        </div>
+
+        <div class="navbar-display-sm" id="navbarSupportedContent">
           <span class="navbar-text">
             <div class="navbar-text-title">
               <p class="spanish display-block">Seleccione el idioma</p>
@@ -60,10 +101,16 @@
       </div>
     </nav>
     <div class="spacing"></div>
+    <div class="rect-45"></div>
+    <div class="logo">
+      <a class="navbar-brand">
+        <img src="build/img/logo/mpetsa.webp" alt="logo" />
+      </a>
+    </div>
   </header>
 
   <main class="vertical-center">
-    <div class="left-navbar">
+    <div class="left-navbar fixed-left-nav">
       <!-- Sidebar -->
       <div class="sidebar">
         <ul class="navbar-nav me-auto">
@@ -74,13 +121,30 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="services.html">
+            <!-- <a class="nav-link" href="services.html">
               <div class="spanish display-block">Servicios</div>
               <div class="english display-none">Services</div>
-            </a>
+            </a> -->
+            <button class="dropdown-btn nav-link">Servicios
+              <svg class="down-arrow" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+              </svg>
+            </button>
+            <div class="dropdown-container">
+              <a href="#">
+                <div class="spanish display-block">Materiales</div>
+                <div class="english display-none">Materials</div>
+              </a>
+              <a href="#">
+                <div class="spanish display-block">Instalaciones</div>
+                <div class="english display-none">Facilities</div>
+              </a>
+            </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">
+            <a class="nav-link nav-active" href="contact.html">
               <div class="spanish display-block">Contacto</div>
               <div class="english display-none">Contact</div>
             </a>
@@ -88,23 +152,19 @@
         </ul>
       </div>
     </div>
-    <div class="content">
-      <section class="container form">
-
-      </section>
-    </div>
+    
   </main>
 
-  <!-- <footer>
-      <p class="spanish display-block">
-        MPETSA <span class="display-large">-</span>
-        <span class="name-extra"> 2022 </span>
-      </p>
-      <p class="english display-none">
-        MPETSA <span class="display-large">-</span>
-        <span class="name-extra"> 2022 </span>
-      </p>
-    </footer> -->
+  <footer>
+    <p class="spanish display-block">
+      MPETSA <span class="display-large">-</span>
+      <span class="name-extra"> 2022 </span>
+    </p>
+    <p class="english display-none">
+      MPETSA <span class="display-large">-</span>
+      <span class="name-extra"> 2022 </span>
+    </p>
+  </footer>
 
   <!-- Boostrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -118,6 +178,22 @@
   <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
     integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
     crossorigin=""></script>
+  <script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>

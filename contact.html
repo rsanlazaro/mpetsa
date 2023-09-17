@@ -34,10 +34,10 @@
 <body>
   <header>
     <!-- navbar -->
-    <nav class="navbar fixed-top-nav navbar-expand-sm">
+    <nav class="navbar fixed-top-nav navbar-expand-md">
       <!-- <nav class="navbar navbar-expand-lg navbar-light"> -->
       <div class="container-fluid navbar-elements">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand transparent">
           <img src="build/img/logo/mpetsa.webp" alt="logo" />
         </a>
 
@@ -69,18 +69,10 @@
             </div>
             <div class="btn-language">
               <button class="btn-spanish">
-                <img
-                  class="btn-spanish-img active"
-                  src="build/img/languages/spanish.webp"
-                  alt="spanish"
-                />
+                <img class="btn-spanish-img active" src="build/img/languages/spanish.webp" alt="spanish" />
               </button>
               <button class="btn-english">
-                <img
-                  class="btn-english-img"
-                  src="build/img/languages/english.webp"
-                  alt="english"
-                />
+                <img class="btn-english-img" src="build/img/languages/english.webp" alt="english" />
               </button>
             </div>
           </span>
@@ -109,10 +101,16 @@
       </div>
     </nav>
     <div class="spacing"></div>
+    <div class="rect-45"></div>
+    <div class="logo">
+      <a class="navbar-brand">
+        <img src="build/img/logo/mpetsa.webp" alt="logo" />
+      </a>
+    </div>
   </header>
 
   <main class="vertical-center">
-    <div class="left-navbar">
+    <div class="left-navbar fixed-left-nav">
       <!-- Sidebar -->
       <div class="sidebar">
         <ul class="navbar-nav me-auto">
@@ -123,13 +121,30 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="services.html">
+            <!-- <a class="nav-link" href="services.html">
               <div class="spanish display-block">Servicios</div>
               <div class="english display-none">Services</div>
-            </a>
+            </a> -->
+            <button class="dropdown-btn nav-link">Servicios
+              <svg class="down-arrow" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+              </svg>
+            </button>
+            <div class="dropdown-container">
+              <a href="#">
+                <div class="spanish display-block">Materiales</div>
+                <div class="english display-none">Materials</div>
+              </a>
+              <a href="#">
+                <div class="spanish display-block">Instalaciones</div>
+                <div class="english display-none">Facilities</div>
+              </a>
+            </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">
+            <a class="nav-link nav-active" href="contact.html">
               <div class="spanish display-block">Contacto</div>
               <div class="english display-none">Contact</div>
             </a>
@@ -142,42 +157,26 @@
         <div class="contact-form">
           <h2 class="title spanish display-block">Contacto</h2>
           <h2 class="title english display-none">Contact</h2>
-          <form
-            action="https://formsubmit.co/26414949918063df4e1da63cd289b75d"
-            method="POST"
-            class="row g-3 needs-validation"
-            novalidate
-          >
+          <form action="https://formsubmit.co/26414949918063df4e1da63cd289b75d" method="POST"
+            class="row g-3 needs-validation" novalidate>
             <div class="col-md-12">
               <label for="validationCustom01" class="form-label">
                 <div class="spanish display-block">Nombre</div>
                 <div class="english display-none">Name</div>
               </label>
-              <input
-                type="text"
-                class="form-control"
-                id="validationCustom01"
-                name="Nombre"
-                required
-              />
+              <input type="text" class="form-control" id="validationCustom01" name="Nombre" required />
               <div class="invalid-feedback">
                 <div class="spanish display-block">Ingrese un nombre</div>
                 <div class="english display-none">Please provide a name</div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6">
               <label for="validationCustom02" class="form-label">
                 <div class="spanish display-block">Teléfono</div>
                 <div class="english display-none">Phone</div>
               </label>
-              <input
-                type="tel"
-                class="form-control"
-                id="validationCustom02"
-                pattern="[0-9]+"
-                required
-                name="Teléfono"
-              />
+              <input type="tel" class="form-control" id="validationCustom02" pattern="[0-9]+" required
+                name="Teléfono" />
               <div class="invalid-feedback">
                 <div class="spanish display-block">
                   Ingrese un número de teléfono
@@ -187,20 +186,14 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6">
               <label for="validationCustomUsername" class="form-label">
                 <div class="spanish display-block">Correo electrónico</div>
                 <div class="english display-none">E-mail</div>
               </label>
               <div class="input-group has-validation">
-                <input
-                  type="email"
-                  class="form-control"
-                  id="validationCustomUsername"
-                  aria-describedby="inputGroupPrepend"
-                  name="Correo"
-                  required
-                />
+                <input type="email" class="form-control" id="validationCustomUsername"
+                  aria-describedby="inputGroupPrepend" name="Correo" required />
                 <div class="invalid-feedback">
                   <div class="spanish display-block">
                     Ingrese un correo válido
@@ -216,12 +209,7 @@
                 <div class="spanish display-block">Mensaje</div>
                 <div class="english display-none">Message</div>
               </label>
-              <textarea
-                class="form-control"
-                id="validationCustom03"
-                name="Mensaje"
-                required
-              ></textarea>
+              <textarea class="form-control" id="validationCustom03" name="Mensaje" required></textarea>
               <div class="invalid-feedback">
                 <div class="spanish display-block">
                   Por favor, ingrese un mensaje
@@ -232,13 +220,7 @@
 
             <div>
               <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="invalidCheck"
-                  required
-                />
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
                 <label class="form-check-label" for="invalidCheck">
                   <a href="#exampleModal" data-bs-toggle="modal">
                     <p class="aviso spanish display-block">
@@ -259,17 +241,9 @@
                 </div>
               </div>
             </div>
-            <input
-              type="hidden"
-              name="_next"
-              value="https://www.mpetsa.com/thanks.html"
-            />
+            <input type="hidden" name="_next" value="https://www.mpetsa.com/thanks.html" />
             <!-- <input type="hidden" name="_cc" value="rsanlazaro@hotmail.com,contacto@mpetsa.com"> -->
-            <input
-              type="hidden"
-              name="_subject"
-              value="Solicitud de informes"
-            />
+            <input type="hidden" name="_subject" value="Solicitud de informes" />
             <div class="d-grid d-md-block d-md-flex justify-content-md-center">
               <button class="btn btn-send" type="submit">
                 <div class="spanish display-block">Enviar</div>
@@ -277,34 +251,18 @@
               </button>
             </div>
 
-            <div
-              class="modal fade"
-              id="exampleModal"
-              tabindex="-1"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
-            >
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h3
-                      class="modal-title spanish display-block"
-                      id="exampleModalLabel"
-                    >
+                    <h3 class="modal-title spanish display-block" id="exampleModalLabel">
                       Aviso de privacidad
                     </h3>
-                    <h3
-                      class="modal-title english display-none"
-                      id="exampleModalLabel"
-                    >
+                    <h3 class="modal-title english display-none" id="exampleModalLabel">
                       Privacy Policy
                     </h3>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body spanish display-block">
                     <p>
@@ -426,10 +384,8 @@
                     </p>
                     <br />
                     <p>
-                      <i
-                        >Última actualización de este aviso de privacidad:
-                        12/10/2022</i
-                      >
+                      <i>Última actualización de este aviso de privacidad:
+                        12/10/2022</i>
                     </p>
                   </div>
                   <div class="modal-body english display-none">
@@ -550,39 +506,46 @@
         <div class="contact-info">
           <div class="contact-point">
             <i class="bi bi-envelope"></i>
-            <a href="mailto: contact@mpetsa.com"><p>contacto@mpetsa.com</p></a>
+            <a href="mailto: contact@mpetsa.com">
+              <p>contacto@mpetsa.com</p>
+            </a>
           </div>
           <div class="contact-point">
             <i class="bi bi-telephone"></i>
-            <a href="tel:5526479117?"><p>55 2647 9117</p></a>
+            <a href="tel:5526479117?">
+              <p>55 2647 9117</p>
+            </a>
           </div>
           <div class="contact-point">
             <i class="bi bi-telephone"></i>
-            <a href="tel:5526479116?"><p>55 2647 9116</p></a>
+            <a href="tel:5526479116?">
+              <p>55 2647 9116</p>
+            </a>
           </div>
           <div class="contact-point">
             <i class="bi bi-geo-alt"></i>
-            <a href="https://www.google.com/maps/place/Ciruela+19,+Granjas+Familiares,+55885+Tepexpan,+M%C3%A9x./@19.6229264,-98.9265286,17z/data=!3m1!4b1!4m6!3m5!1s0x85d1eead1abc6eb9:0xc6523f4f8764a2f5!8m2!3d19.6229264!4d-98.9265286!16s%2Fg%2F11s9j94htx"
-              ><p>
+            <a
+              href="https://www.google.com/maps/place/Ciruela+19,+Granjas+Familiares,+55885+Tepexpan,+M%C3%A9x./@19.6229264,-98.9265286,17z/data=!3m1!4b1!4m6!3m5!1s0x85d1eead1abc6eb9:0xc6523f4f8764a2f5!8m2!3d19.6229264!4d-98.9265286!16s%2Fg%2F11s9j94htx">
+              <p>
                 Ciruela 19, Granjas Familiares, 55885 Tepexpan, Méx.
-              </p></a
-            >
+              </p>
+            </a>
           </div>
         </div>
       </section>
     </div>
   </main>
 
-  <!-- <footer>
-      <p class="spanish display-block">
-        MPETSA <span class="display-large">-</span>
-        <span class="name-extra"> 2022 </span>
-      </p>
-      <p class="english display-none">
-        MPETSA <span class="display-large">-</span>
-        <span class="name-extra"> 2022 </span>
-      </p>
-    </footer> -->
+  <footer>
+    <p class="spanish display-block">
+      MPETSA <span class="display-large">-</span>
+      <span class="name-extra"> 2022 </span>
+    </p>
+    <p class="english display-none">
+      MPETSA <span class="display-large">-</span>
+      <span class="name-extra"> 2022 </span>
+    </p>
+  </footer>
 
   <!-- Boostrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -596,6 +559,22 @@
   <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
     integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
     crossorigin=""></script>
+  <script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>
