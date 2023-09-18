@@ -1,33 +1,137 @@
 @use "base/mixins" as m;
 @use "base/variables" as v;
 
-.section-left-container{
-    margin: 0;
-    background-color: v.$mediumBackground;
-    padding: 1.5rem;
-    
+.section-left-container {
+  margin: 0;
+  background-color: v.$mediumBackground;
+  padding: 1.5rem;
 }
 
-.section-right{
-    text-align: right;  
-    ul{
-        justify-self: end;
-    }    
+.section-right-container {
+  margin: 0;
+  padding: 1.5rem;
 }
 
-.section-left, .section-right{
-    padding: 5rem auto !important;
-    width: 95%;
-    margin: 2rem auto;
+.section-right {
+  text-align: right;
+  ul {
+    justify-self: end;
+  }
+}
 
-    h4{
-        font-size: 2rem;  
-        margin: 1.5rem; 
-        margin-bottom: 0.5rem;     
-        font-weight: bold;
+.border-top-line {
+  border-top: 2px solid v.$mediumBackground;
+  margin: 0 !important;
+  padding: 5rem 15%;
+  width: 100%;
+}
+
+.section-left,.section-right {
+  padding: 5rem auto !important;
+  width: 95%;
+  margin: 5rem auto;
+  h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  p {
+    font-size: 2rem;
+    margin: 2rem 0 2rem 0;
+    margin-top: 0;
+  }  
+}
+
+.grid-gallery-instalaciones {
+  h4 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 7px;
+  grid-row-gap: 7px;
+  @include m.resetear-lista;
+  @include m.grid(2, 1rem);
+  @include m.telefonoSM {
+    @include m.grid(3, 1.5rem);
+  }
+  @include m.telefono {
+    @include m.grid(4, 2rem);
+  }
+  @include m.desktop {
+    @include m.grid(5, 2rem);
+  }
+  @include m.desktopXL {
+    @include m.grid(6, 2rem);
+  }  
+  img {
+    height: 10rem;
+    object-fit: cover;
+  }
+}
+
+.div1 {
+  grid-area: 2 / 1 / 3 / 3;
+}
+.div2 {
+  grid-area: 2 / 3 / 3 / 5;  
+}
+.div3 {
+  grid-area: 2 / 5 / 3 / 7;
+}
+.div4 {
+  grid-area: 2 / 7 / 3 / 9;
+}
+.div5 {
+  grid-area: 2 / 9 / 3 / 11;
+}
+.div6 {
+  grid-area: 2 / 11 / 3 / 13;
+}
+.div7 {
+  grid-area: 1 / 1 / 2 / 6;
+}
+.div8 {
+  grid-area: 1 / 6 / 2 / 11;
+}
+.div9 {
+  grid-area: 1 / 11 / 2 / 13;
+}
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  height: 10rem;
+  width: 70%;
+  margin: auto;
+  margin-bottom:65rem;
+  gap: 5rem;
+  @include m.telefono {
+    grid-template-columns: repeat(2,1fr);
+    margin-bottom: 20rem;
+  }
+  @include m.tablet {
+    grid-template-columns: repeat(4,1fr);
+    margin-bottom: 10rem;
+  }
+  div {
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    img {
+      height: 100%;
+      width: 60%;
+      object-fit: contain;
     }
-    p{
-        font-size: 1.5rem;
-        margin: 1.5rem;
-    }
+  }
 }

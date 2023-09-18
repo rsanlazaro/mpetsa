@@ -28,8 +28,7 @@ body {
 
 main {
   flex: 1;
-  margin: 0
-;
+  margin: 0;
   // @include m.desktop {
   //   margin: 3rem 5rem;
   // }
@@ -41,19 +40,23 @@ figure {
 
 .section-container {
   margin: 0rem 1rem 0rem 1rem;
+
   @include m.telefonoSM {
     margin-left: 2rem;
     margin-right: 2rem;
   }
+
   @include m.telefono {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
   }
+
   @include m.desktop {
     max-width: 95rem;
     margin-left: auto;
     margin-right: auto;
   }
+
   @include m.desktopXL {
     max-width: 110rem;
   }
@@ -64,10 +67,12 @@ h2 {
   margin: 2rem;
   text-align: center;
   font-size: 2rem;
+
   @include m.telefonoSM {
     margin: 2rem;
     font-size: 2.25rem;
   }
+
   @include m.desktop {
     font-size: 2.5rem;
   }
@@ -78,10 +83,12 @@ h3 {
   margin: 1rem;
   text-align: center;
   font-size: 1.4rem;
+
   @include m.telefonoSM {
     margin: 2rem;
     font-size: 1.6rem;
   }
+
   @include m.desktop {
     font-size: 2.1rem;
   }
@@ -97,12 +104,15 @@ label,
 .modal-title,
 .btn {
   font-size: 1.2rem;
+
   @include m.telefonoSM {
     font-size: 1.4rem;
   }
+
   @include m.tablet {
     font-size: 1.4rem;
   }
+
   @include m.desktop {
     font-size: 1.4rem;
   }
@@ -114,9 +124,11 @@ li,
 .invalid-feedback,
 .thanks-home {
   font-size: 1.4rem;
+
   @include m.tablet {
     font-size: 1.45rem;
   }
+
   @include m.desktopXL {
     font-size: 1.65rem;
   }
@@ -130,9 +142,11 @@ li,
 .form-control {
   color: v.$oscuro;
   font-size: 1.2rem;
+
   @include m.tablet {
     font-size: 1.3rem;
   }
+
   @include m.desktop {
     font-size: 1.3rem;
   }
@@ -145,6 +159,7 @@ label {
 .modal-body {
   p {
     font-size: 1.15rem;
+
     @include m.telefono {
       font-size: 1.3rem;
     }
@@ -155,6 +170,7 @@ label {
   max-width: 120rem;
   padding: 0 2rem;
   margin: 2rem;
+
   @include m.telefonoSM {
     padding: inherit 4rem;
   }
@@ -186,9 +202,11 @@ footer {
 
 .main-section {
   margin-top: 2rem;
+
   @include m.telefono {
     margin-top: 3rem;
   }
+
   @include m.desktop {
     margin-top: 0;
   }
@@ -207,6 +225,7 @@ footer {
     padding: 3rem 3rem 4rem 2rem;
     margin: 0 15rem;
   }
+
   @include m.desktopXL {
     margin: inherit 30rem;
   }
@@ -214,7 +233,22 @@ footer {
 
 .transparent {
   opacity: 1;
+
   @include m.tablet {
     opacity: 0;
   }
+}
+
+#instalaciones {
+  display: block;
+  position: relative;
+  top: -9.5rem;
+  visibility: hidden;
+}
+
+#materiales {
+  display: block;
+  position: relative;
+  top: -20rem;
+  visibility: hidden;
 }

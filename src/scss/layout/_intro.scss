@@ -239,7 +239,7 @@ ul {
 
 .section-title {
   width: 70%;
-  margin: 5rem auto;
+  margin: 10rem auto;
 
   h2 {
     color: v.$darkBackground;
@@ -255,6 +255,7 @@ ul {
 
   &:first-of-type {
     margin-top: 0;
+    margin-bottom: 5rem;
   }
 }
 

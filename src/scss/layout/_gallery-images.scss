@@ -3,19 +3,23 @@
 
 .section-container-gallery {
   margin: 0rem 1rem 0rem 1rem;
+
   @include m.telefonoSM {
     margin-left: 2rem;
     margin-right: 2rem;
   }
+
   @include m.telefono {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
   }
+
   @include m.desktop {
     margin-left: auto;
     margin-right: auto;
     max-width: 95rem;
   }
+
   @include m.desktopXL {
     max-width: 115rem;
   }
@@ -23,39 +27,136 @@
 
 .galeria {
   padding: 5rem 0;
+
   h3 {
     text-align: center;
   }
 }
 
-.galeria-imagenes {  
+.galeria-imagenes {
   @include m.resetear-lista;
   @include m.grid(2, 1rem);
+
   @include m.telefonoSM {
     @include m.grid(3, 1.5rem);
   }
+
   @include m.telefono {
     @include m.grid(4, 2rem);
   }
+
   @include m.desktop {
     @include m.grid(5, 2rem);
   }
+
   @include m.desktopXL {
     @include m.grid(6, 2rem);
-  }  
+  }
+
+  div {
+    position: relative;
+    height: 15rem;
+  }
+
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
     transition: all 0.1s;
-    &:hover {
-      -webkit-box-shadow: 0px 0px 7px 1px v.$gris;
-      -moz-box-shadow: 0px 0px 7px 1px v.$gris;
-      box-shadow: 0px 0px 7px 1px v.$gris;
+    object-fit: cover;
+
+    &:hover+span {
+      // bottom: 0rem;
+      // opacity: 1;
+      z-index: 3;
+      animation-name: pop;
+      animation-duration: 0.25s;
+      animation-fill-mode: forwards;
     }
-  }
+
+    // &:hover+.rect-hover {
+    //   opacity: 1;
+    //   z-index: 2;
+  // }
 }
 
-.grid-right{
+span {
+  background-color: rgb(10, 21, 59, 0.75);
+  position: absolute;
+  color: v.$blanco;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  // padding: 1rem;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes pop {
+  0% {
+    height: 0rem;
+    // opacity: 0.1;
+  }
+  10% {
+    height: 0.5rem;
+    // opacity: 0.1;
+  }
+  20% {
+    height: 1rem;
+    // opacity: 0.1;
+  }
+  30% {
+    height: 1.5rem;
+    // opacity: 0.1;
+  }
+  40% {
+    height: 2rem;
+    // opacity: 0.1;
+  }
+  50% {
+    height: 2.5rem;
+    // opacity: 0.1;
+  }
+  60% {
+    height: 3rem;
+    // opacity: 0.2;
+  }
+  70% {
+    height: 3.5rem;
+    padding-top: 0.25rem;
+    // opacity: 0.3;
+  }
+  80% {
+    height: 4rem;
+    padding-top: 0.5rem;
+    // opacity: 0.5;
+  }
+  90% {
+    height: 4.5rem;
+    padding-top: 0.75rem;
+    // opacity: 0.75;
+  }
+  100% {
+    height: 5rem;
+    padding-top: 1rem;
+    // opacity: 1;
+  }  
+}
+
+// .rect-hover {
+//   position: absolute;
+//   width: 100%;
+//   bottom: 0;
+//   left: 0;
+//   height: 5rem;
+//   opacity: 0;
+//   background-color: rgb(10,21,59,0.75)
+// }
+}
+
+.grid-right {
   grid-auto-flow: dense;
   direction: rtl;
 }
@@ -107,17 +208,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   &:hover {
     cursor: pointer;
     -webkit-box-shadow: 0px 0px 7px 1px v.$gris;
     -moz-box-shadow: 0px 0px 7px 1px v.$gris;
     box-shadow: 0px 0px 7px 1px v.$gris;
   }
+
   @include m.telefonoSM {
     width: 4.5rem;
     height: 4.5rem;
     font-size: large;
   }
+
   @include m.tablet {
     width: 5.5rem;
     height: 5.5rem;
