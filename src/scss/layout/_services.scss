@@ -7,17 +7,20 @@
   gap: 1.5rem;
   margin-top: 1.5rem;
   margin-bottom: 5rem;
+
   @include m.telefonoSM {
     grid-template-columns: repeat(1, 1fr);
     // gap: 3rem;
     margin-top: 3rem;
   }
+
   @include m.telefono {
     margin: 5rem auto 10rem auto;
     gap: 4rem;
     max-width: 80rem;
     grid-template-columns: repeat(2, 1fr);
   }
+
   @include m.tablet {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -25,6 +28,7 @@
 
 .main-service {
   margin-top: 5rem;
+
   @include m.tablet {
     max-width: 80rem;
     margin: 5rem auto 10rem auto;
@@ -50,12 +54,10 @@ figure {
   top: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    0deg,
-    rgba(1, 27, 77, 0.7),
-    rgba(255, 255, 255, 0.3) 40%,
-    transparent
-  );
+  background: linear-gradient(0deg,
+      rgba(1, 27, 77, 0.7),
+      rgba(255, 255, 255, 0.3) 40%,
+      transparent);
 }
 
 .element {
@@ -66,6 +68,7 @@ figure {
   display: block;
   margin-top: 1rem;
   text-align: center;
+
   @include m.telefono {
     display: none;
   }
@@ -73,6 +76,7 @@ figure {
 
 .title-service {
   display: none;
+
   @include m.telefono {
     display: block;
     color: white;
@@ -94,16 +98,20 @@ figure {
       transition: opacity 1.5s;
       transition-timing-function: ease-out;
     }
+
     .element {
       position: relative;
+
       &:hover {
         .title-service {
           display: none;
         }
+
         .img-gradient {
           opacity: 0.25;
           transition: all 1s;
         }
+
         .main-services {
           padding: 4rem;
           display: block;
@@ -118,12 +126,14 @@ figure {
           color: lighten(v.$azul, 60%);
           font-weight: 600;
           font-size: 1.25rem;
+
           .materials {
             display: flex;
             justify-content: center;
             text-align: center;
             align-items: center;
           }
+
           @include m.tablet {
             padding: 8rem;
             grid-template-columns: repeat(2, 1fr);
@@ -139,4 +149,304 @@ figure {
 
 .main-services {
   display: none;
+}
+
+.container-grid {
+  width: 80%;
+  margin: auto;
+
+  // margin-bottom: 10rem;
+  // height: 100%;
+  h4 {
+    margin: 4rem !important;
+  }
+}
+
+/* Grid facilities */
+
+.grid-equipment {
+  grid-template-columns: repeat(2, 1fr) !important;
+  grid-template-rows: 1fr !important;
+  height: 15rem;
+  width: 100%;
+
+  @include m.tablet {
+    grid-template-columns: repeat(4, 1fr) !important;
+    height: 20rem;
+  }
+
+  .div7 {
+    grid-area: unset;
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+
+    @include m.tablet {
+      height: 20rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover !important;
+    }
+  }
+}
+
+.grid-duct {
+  grid-template-columns: repeat(2, 1fr) !important;
+  grid-template-rows: 1fr !important;
+  height: 15rem;
+  width: 100%;
+
+  @include m.tablet {
+    grid-template-columns: repeat(4, 1fr) !important;
+    height: 20rem;
+  }
+
+  .div7,
+  .div8 {
+    grid-area: unset;
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+
+    @include m.tablet {
+      height: 20rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover !important;
+    }
+  }
+}
+
+.grid-insulation {
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr) !important;
+  grid-template-rows: auto;
+
+  @include m.tablet {
+    height: calc(20rem + 15rem + 2rem);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .div1,
+  .div2,
+  .div3,
+  .div4,
+  .div5,
+  .div6 {
+    height: 15rem;
+  }
+
+  .div7,
+  .div8,
+  .div9 {
+    height: 15rem;
+
+    @include m.tablet {
+      height: 20rem;
+    }
+  }
+
+  .div7,
+  .div8,
+  .div9,
+  .div1,
+  .div2,
+  .div3,
+  .div4,
+  .div5,
+  .div6 {
+    width: 100%;
+    object-fit: cover;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover !important;
+    }
+
+    grid-area: unset;
+  }
+
+  @include m.tablet {
+    .div1 {
+      grid-area: 2 / 1 / 3 / 3;
+    }
+
+    .div2 {
+      grid-area: 2 / 3 / 3 / 5;
+    }
+
+    .div3 {
+      grid-area: 2 / 5 / 3 / 7;
+    }
+
+    .div4 {
+      grid-area: 2 / 7 / 3 / 9;
+    }
+
+    .div5 {
+      grid-area: 2 / 9 / 3 / 11;
+    }
+
+    .div6 {
+      grid-area: 2 / 11 / 3 / 13;
+    }
+
+    .div7 {
+      grid-area: 1 / 1 / 2 / 6;
+    }
+
+    .div8 {
+      grid-area: 1 / 6 / 2 / 11;
+    }
+
+    .div9 {
+      grid-area: 1 / 11 / 2 / 13;
+    }
+  }
+}
+
+.grid-vapor {
+  // grid-template-columns: repeat(4, 1fr) !important;
+  // grid-template-rows: 1fr !important;
+
+  grid-template-columns: repeat(2, 1fr) !important;
+  grid-template-rows: auto;
+  height: calc(17.5rem * 2);
+  // height: 17.5rem;
+  width: 100%;
+
+  @include m.tablet {
+    height: 17.5rem;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .div7,
+  .div8,
+  .div9 {
+    // grid-area: unset;
+    width: 100%;
+    height: 17.5rem;
+    object-fit: cover;
+    grid-area: unset;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover !important;
+    }
+  }
+
+  @include m.tablet {
+    .div7 {
+      grid-area: 1 / 1 / 2 / 6;
+    }
+
+    .div8 {
+      grid-area: 1 / 6 / 2 / 11;
+    }
+
+    .div9 {
+      grid-area: 1 / 11 / 2 / 13;
+    }
+  }
+}
+
+.grid-finishes {
+  // height: calc(20rem * 15rem + 2rem);
+  width: 100%;
+  grid-template-columns: repeat(2,1fr) !important;
+
+  @include m.tablet {
+    grid-template-columns: repeat(12,1fr);
+    height: calc(20rem + 15rem + 2rem);
+    width: 100%;
+  }
+
+  .div1,
+  .div2,
+  .div3,
+  .div4,
+  .div5,
+  .div6 {
+    height: 15rem;
+  }
+
+  .div7,
+  .div8,
+  .div9 {
+    height: 15rem;
+
+    @include m.tablet {
+      height: 20rem;
+    }
+  }
+
+  .div7,
+  .div8,
+  .div9,
+  .div1,
+  .div2,
+  .div3,
+  .div4,
+  .div5,
+  .div6 {
+    width: 100%;
+    object-fit: cover;
+    grid-area: unset;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover !important;
+    }
+  }
+
+  @include m.tablet {
+    .div1 {
+      grid-area: 2 / 1 / 3 / 3;
+    }
+
+    .div2 {
+      grid-area: 2 / 3 / 3 / 6;
+    }
+
+    .div3 {
+      grid-area: 2 / 6 / 3 / 8;
+    }
+
+    .div4 {
+      grid-area: 2 / 8 / 3 / 11;
+    }
+
+    .div5 {
+      grid-area: 2 / 11 / 3 / 13;
+    }
+
+    // .div6 { grid-area: 1 / 12 / 2 / 13; }}
+    .div7 {
+      grid-area: 1 / 1 / 2 / 6;
+    }
+
+    .div8 {
+      grid-area: 1 / 6 / 2 / 10;
+    }
+
+    .div9 {
+      grid-area: 1 / 10 / 2 / 13;
+    }
+  }
+}
+
+#img01 {
+  object-fit: contain !important;
+  background-color: transparent;
 }
