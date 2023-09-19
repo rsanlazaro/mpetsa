@@ -134,6 +134,16 @@ li,
   }
 }
 
+span {
+  font-size: 1.2rem;
+  @include m.tablet {
+    font-size: 1.3rem;
+  }
+  @include m.desktopXL {
+    font-size: 1.4rem;
+  }
+}
+
 .invalid-feedback {
   color: lighten(v.$naranja, 10%);
   font-weight: 500;

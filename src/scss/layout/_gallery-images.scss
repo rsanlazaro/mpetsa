@@ -38,24 +38,31 @@
   @include m.grid(1, 4rem);
 
   @include m.telefonoSM {
-    @include m.grid(2, 1.5rem);
+    @include m.grid(1, 5rem);
   }
 
   @include m.telefono {
+    @include m.grid(2, 2rem);
+  }
+
+  @include m.tablet {
     @include m.grid(3, 2rem);
   }
 
   @include m.desktop {
-    @include m.grid(5, 2rem);
+    @include m.grid(4, 2rem);
   }
 
   @include m.desktopXL {
-    @include m.grid(6, 2rem);
+    @include m.grid(5, 2rem);
   }
 
   div {
     position: relative;
-    height: 15rem;
+    height: 18rem;
+    @include m.tablet {
+      height: 20rem;
+    }
   }
 
   img {
@@ -143,6 +150,59 @@ span {
     padding-top: 1rem;
     // opacity: 1;
   }  
+}
+
+@include m.tablet {
+  @keyframes pop {
+    0% {
+      height: 0rem;
+      // opacity: 0.1;
+    }
+    10% {
+      height: calc(0.75rem);
+      // opacity: 0.1;
+    }
+    20% {
+      height: calc(0.75rem * 2);
+      // opacity: 0.1;
+    }
+    30% {
+      height: calc(0.75rem * 3);
+      // opacity: 0.1;
+    }
+    40% {
+      height: calc(0.75rem * 4);
+      // opacity: 0.1;
+    }
+    50% {
+      height: calc(0.75rem * 5);
+      // opacity: 0.1;
+    }
+    60% {
+      height: calc(0.75rem * 6);
+      // opacity: 0.2;
+    }
+    70% {
+      height: calc(0.75rem * 7);
+      padding-top: 0.25rem;
+      // opacity: 0.3;
+    }
+    80% {
+      height: calc(0.75rem * 8);
+      padding-top: 0.5rem;
+      // opacity: 0.5;
+    }
+    90% {
+      height: calc(0.75rem * 9);
+      padding-top: 0.75rem;
+      // opacity: 0.75;
+    }
+    100% {
+      height: calc(0.75rem * 10);
+      padding-top: 1rem;
+      // opacity: 1;
+    }  
+  }
 }
 
 // .rect-hover {
