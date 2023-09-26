@@ -355,13 +355,15 @@ nav {
   position: fixed;
   width: 20rem;
   top: 2vw;
-  left: 3vw;
+  left: 2vw;
   z-index: 1000000;
   display: none;
 
   .navbar-brand {
     img {
-      width: 17rem;
+      width: 19rem;
+      max-width: 20rem;
+      max-height: 20rem;
     }
   }
   @include m.tablet {
